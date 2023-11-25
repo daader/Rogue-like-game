@@ -7,7 +7,12 @@ pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HIGHT))
 clock = pygame.time.Clock()
 running = True
+player = pygame.image.load('player.bmp').convert()
+position_man = ([0,0])
 
+for x in range(10):                    #create 10 objects</i>
+    man = GameObject( player , 0*40, 0)
+    objects.append(man)
 
 while running:
     # poll for events
@@ -16,11 +21,10 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     # fill the screen with a color to wipe away anything from last frame
-    screen.fill("blue")
+    screen.fill("yellow")
 
     # RENDER YOUR GAME HERE
-
-
+    screen.blit( man , position_man)
     # flip() the display to put your work on screen
     pygame.display.flip()
 
