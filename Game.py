@@ -7,7 +7,7 @@ pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HIGHT))
 clock = pygame.time.Clock()
 running = True
-player = pygame.image.load('player.bmp').convert()
+
 position_man = ([0,0])
 
 for x in range(10):                    #create 10 objects</i>
